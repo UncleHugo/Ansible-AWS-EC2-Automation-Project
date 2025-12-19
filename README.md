@@ -63,3 +63,39 @@ This enables:
 - Secure access aligned with DevOps best practices
 
 SSH keys are distributed automatically to ensure Ansible can manage all nodes without manual intervention.
+
+
+## Task 3: Conditional Automation Based on OS Facts
+
+Ansible conditionals are used to shut down Ubuntu instances only, leaving the CentOS instance untouched.
+
+How it works:
+
+- Ansible gathers system facts from each host
+
+- Tasks use when conditions to check the OS distribution
+
+- Shutdown actions run exclusively on Ubuntu nodes
+
+This demonstrates controlled, OS-aware automation rather than blanket execution.
+
+
+### Prerequisites
+
+1. Ansible installed on the control node
+
+2. AWS account with EC2 permissions
+
+3. AWS credentials configured (env vars or AWS config)
+
+4. Required Ansible AWS collections installed
+
+5. SSH key pair available
+
+### Execution Flow
+
+1. Provision EC2 instances on AWS
+
+2. Configure passwordless SSH access
+
+3. Apply OS-specific shutdown automation
