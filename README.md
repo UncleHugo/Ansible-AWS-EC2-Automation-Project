@@ -48,3 +48,18 @@ One AWS Linux instance
 - Mirrors how infrastructure is defined in real DevOps workflows
 
 The playbook executes locally on the control node and interacts directly with AWS APIs.
+
+
+## Task 2: Passwordless SSH Authentication
+
+Passwordless authentication is configured between the Ansible control node and all EC2 instances.
+
+This enables:
+
+- Fully automated configuration management
+
+- Non-interactive playbook execution
+
+- Secure access aligned with DevOps best practices
+
+SSH keys are distributed automatically to ensure Ansible can manage all nodes without manual intervention.
