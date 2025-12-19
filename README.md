@@ -29,3 +29,22 @@ Cloud Provider: AWS EC2
 1 × AWS Linux EC2 instance
 
 All infrastructure is provisioned and managed via code.
+
+
+## Task 1: EC2 Provisioning with Ansible Loops
+
+Ansible is used to provision three EC2 instances in AWS using a single playbook and loop logic:
+
+Two Ubuntu instances
+
+One AWS Linux instance
+
+#### Why this matters:
+
+- Avoids duplicated YAML
+
+- Scales cleanly as instance count grows
+
+- Mirrors how infrastructure is defined in real DevOps workflows
+
+The playbook executes locally on the control node and interacts directly with AWS APIs.
