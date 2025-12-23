@@ -6,6 +6,7 @@ Creted a user(ugochukwu1) and granted the permission of *_AmazonEC2FullAccess_* 
 <img width="1892" height="723" alt="Screenshot 2025-12-19 025430" src="https://github.com/user-attachments/assets/dbaa1c56-f2e9-4e68-b266-51a82fd1088d" />
 
 
+<img width="1451" height="107" alt="image" src="https://github.com/user-attachments/assets/8dbd93c6-3f45-4ebd-844f-1a19a4802763" />
 
 
 
