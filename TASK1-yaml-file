@@ -1,1 +1,20 @@
-
+--- 
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Create EC2 instance
+    amazon.aws.ec2_instance:
+      name: "{{ item.name }}"
+      key_name: "hg-key-pair"
+      instance_type: t3.small
+      security_group: default
+      region: eu-north-1
+      aws_access_key: "{{ec2_access_key}}"  # From vault as defined
+      aws_secret_key: "{{ec2_secret_key}}"  # From vault as defined      
+      network:
+        assign_public_ip: true
+      image_id: "{{ item.image }}"
+    loop:
+      - { image: "ami-0fa91bc90632c73c9", name: "Ubuntu-Instance-1" }  
+      - { image: "ami-0fa91bc90632c73c9", name: "Ubuntu-Instance-2" } 
+      - { image: "ami-0b46816ffa1234887", name: "AWS-Instance-3" } 
