@@ -5,6 +5,6 @@ This allows Ansible to connect and execute playbooks securely without requiring 
 
 Public key authentication is used to ensure secure, consistent, and repeatable access across all managed nodes.
 
-ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" username@ <INSTANCE-PUBLIC-IP>
+_ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@INSTANCE-PUBLIC-IP_
 
 
