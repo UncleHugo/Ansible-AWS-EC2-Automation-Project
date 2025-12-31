@@ -2,15 +2,13 @@
 
 This project demonstrates production-style infrastructure automation on AWS using Ansible. It focuses on repeatable provisioning, secure access configuration, and conditional operations based on operating system facts.
 
-The goal is not just to create instances, but to show clean automation patterns a DevOps engineer would actually use.
+The goal is not just to create instances, but to show clean automation patterns a Cloud engineer would actually use.
 
 ### Key Capabilities Demonstrated
 
 - Infrastructure provisioning on AWS using Ansible
 
 - Scalable resource creation using loops
-
-- Secure, passwordless SSH authentication
 
 - OS-aware automation using gathered facts
 
@@ -31,7 +29,7 @@ Cloud Provider: AWS EC2
 All infrastructure is provisioned and managed via code.
 
 
-## Task 1: EC2 Provisioning with Ansible Loops
+## Task : EC2 Provisioning with Ansible Loops
 
 Ansible is used to provision three EC2 instances in AWS using a single playbook and loop logic:
 
@@ -50,36 +48,6 @@ One AWS Linux instance
 The playbook executes locally on the control node and interacts directly with AWS APIs.
 
 
-## Task 2: Passwordless SSH Authentication
-
-Passwordless authentication is configured between the Ansible control node and all EC2 instances.
-
-This enables:
-
-- Fully automated configuration management
-
-- Non-interactive playbook execution
-
-- Secure access aligned with DevOps best practices
-
-SSH keys are distributed automatically to ensure Ansible can manage all nodes without manual intervention.
-
-
-## Task 3: Conditional Automation Based on OS Facts
-
-Ansible conditionals are used to shut down Ubuntu instances only, leaving the CentOS instance untouched.
-
-How it works:
-
-- Ansible gathers system facts from each host
-
-- Tasks use when conditions to check the OS distribution
-
-- Shutdown actions run exclusively on Ubuntu nodes
-
-This demonstrates controlled, OS-aware automation rather than blanket execution.
-
-
 ### Prerequisites
 
 1. Ansible installed on the control node
@@ -96,6 +64,4 @@ This demonstrates controlled, OS-aware automation rather than blanket execution.
 
 1. Provision EC2 instances on AWS
 
-2. Configure passwordless SSH access
 
-3. Apply OS-specific shutdown automation
